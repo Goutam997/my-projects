@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Expense</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh ;
+        } 
+    </style>
+    <body>
+        <h1 id="totalExp"></h1>
+        <button id="ButtID">+</button>
+    
+        <input id="input" type="number" placeholder="Expense">
+        <!--input doesn't have a closing tag-->
+        <input id="inpDesc" type="text" placeholder="Description">
+        <div></div>
+        <div id="ExpenseTable"></div>
+
+        <script>
+            let num = 0;
+            console.log("0");
+            //Get the heading element(ToalExp)
+            const headElement = document.querySelector("#totalExp");
+            //Set the heading element
+            headElement.textContent = num;
+            //Get the Input description
+            const inputDescEl = document.querySelector("#inpDesc");
+            //Get the ref to input amount
+            const inputElement = document.querySelector("#input");
+            // Then we increment the num on each event count
+
+            function listItemInTable(amount, desc){
+                return `
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div class="d-flex flex-column">
+                                    ${desc}
+                                <small class="text-muted">March 11, 2019</small>
+                            </div>
+                            <div>
+                                <span class="px-5">
+                                    ${amount}
+                                </span>
+                                <button type="button" class="btn btn-outline-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </li>
+                </div>        
+                `
+            }
+    
+            let allExpenses = [];
+            //array to store all expenses
+            function AddExpense(){
+
+                let expenseObj = {};
+                //list to store individual expenses 
+                
+                const textDesc = inputDescEl.value;
+                
+                expense = parseInt(inputElement.value, 10)
+                num= num + expense ;
+                //const TotalExpense = num;
+
+                console.log({textDesc, expense})
+                
+                //headElement.textContent = num;
+
+                expenseObj.amount = expense;
+                expenseObj.desc = textDesc;
+                //console.log(expenseObj)
+
+                //To push the current expense as an obj of the allExpense array
+                allExpenses.push(expenseObj);
+                //console.table(allExpenses);
+
+                const someText = `Total:` + num;
+                headElement.textContent = someText;
+
+                //to create and display the elements in table
+                let allExpenseHTML =  allExpenses.map(expense => ());
+
+                expenseTableObj.innerHTML = allExpenseHTML.join("");
+
+                                
+            }
+
+            // To Get an event element(button in this case) we use query selector function (we can select a class using "." and an ID using "#")
+            const event = document.querySelector("#ButtID") ;
+
+            //To Get the ref of the expense table into an element
+            const expenseTableObj =  document.querySelector("#ExpenseTable")
+            
+            // To listen to an event.
+            event.addEventListener("click", AddExpense, false);
+
+        </script> 
+    </body>
+    </html>
+    </body>
