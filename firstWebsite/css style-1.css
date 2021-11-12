@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body{
+    /**background-color: lightgray;
+    text-align-last: center;**/
+    font-family:'Montserrat', sans-serif;
+}
+:root{
+    --primary-color : #A78BFA; 
+    --white-1 : #F9FAFB; 
+    --gray-1 : #D1D5DB; 
+}
+
+h1{
+    color: #A78BFA;
+}
+
+hr{
+    margin: 2rem 0rem;
+}
+
+#blog-img{
+    max-width: 300px;
+    padding: 2rem 5rem 2rem 1rem;
+}
+
+.container{
+    padding: 2rem 1rem;
+    margin-block: solid;
+}
+.container-fluid{
+    padding-left: 1rem;
+    padding-right: 3rem;
+    margin: left;
+}
+.container-center{
+    margin: auto;
+    max-width: 600px;
+}
+.link{
+    text-decoration: none;
+    padding: 1rem 0.5rem;
+}
+.primary-link{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    color: white;
+    
+}
+.secondary-link{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+}
+.link-active:active{
+    font-weight: bold;
+}
+
+.list-item-inline{
+    background-color: var(--primary-color);
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+.list-inline{
+    /**text-align: right;**/
+    list-style: none;
+    color: white;
+}
+
+.nav-bar{
+    background-color: var(--primary-color);
+    color: white;
+    border-top-left-radius: 2rem;
+    padding: 2rem;
+}
+.nav-bar .link{
+    color: white;
+}
+.nav-bar #navID{
+    font-size: 20px; 
+}
+.nav-bar .nav-list{
+    text-align: right;
+}
+.hero{
+    padding: 2rem;
+    display: block;
+}
+.hero .hero-img{
+    width: 400px;
+    display: block; 
+    margin: auto;
+}
+.hero .hero-head{
+    padding: 1rem 0rem;
+    color: var(--gray-1); 
+    text-align-last: center;
+}
+section{
+    padding: 2rem;   
+}
+#wbg{
+    background-color: var(--white-1);
+}
+#owbg{
+    background-color: var(--gray-1);
+}
+
+footer{
+    text-align: center ;
+    color: black;
+    background-color: var(--primary-color);
+    border-bottom-right-radius: 2rem;
+}
+footer a{
+    color: white;
+}
+a:hover{
+    text-shadow: 1px 1px 2px #4B5563;
+}
+.link .a:hover{
+    box-shadow: 1rem 0.5rem #4B5563;
+    background-color: var(--gray-1);
+}
+footer h2{
+    font-weight: bold;
+    font-size: large;
+}
+.link img{
+    width: 1rem;
+    display: inline;
+    margin: auto;
+}
+
+.container .section-icons{
+    display: inline;
+    width: 10rem;
+    height: 10rem;
+    margin-left: 25rem;
+    margin-right: 5rem;
+}
